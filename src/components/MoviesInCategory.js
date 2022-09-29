@@ -33,7 +33,7 @@ function MoviesInCategory() {
 
     if(done){
         if(movies.length == 0){
-            window.location.assign('https://reeldiary.herokuapp.com/movies')
+            window.location.assign('/movies')
         }
     }
 
@@ -42,7 +42,7 @@ function MoviesInCategory() {
             {movies && <div className='bottomTitle'><h1>{movies[0].genre}</h1></div>}
             <div className='movs'>
             {movies && movies.map(movie => {
-                   return <Link to={`https://reeldiary.herokuapp.com/movies/${movie._id}`}> <div className='movie-card' style={{backgroundPosition:'center', backgroundSize: 'cover', backgroundImage: `url(${movie.url})`}}>
+                   return <Link to={`/movies/${movie._id}`}> <div className='movie-card' style={{backgroundPosition:'center', backgroundSize: 'cover', backgroundImage: `url(${movie.url})`}}>
                     <h1>{movie.title}</h1>
                    </div>
                    </Link>

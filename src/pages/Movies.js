@@ -42,7 +42,7 @@ function Movies() {
                 <br></br>
                 <div className='bottom'>
                 {movies && movies.map(movie => {
-                   return <Link to={`https://reeldiary.herokuapp.com/movies/${movie._id}`}> <div className='movie-card' style={{backgroundPosition:'center', backgroundSize: 'cover', backgroundImage: `url(${movie.url})`}}>
+                   return <Link to={`/movies/${movie._id}`}> <div className='movie-card' style={{backgroundPosition:'center', backgroundSize: 'cover', backgroundImage: `url(${movie.url})`}}>
                     <h1>{movie.title}</h1>
                    </div>
                    </Link>

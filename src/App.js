@@ -18,14 +18,14 @@ function App() {
       <Navbar />
       <div className='pages'>
         <Routes>
-          <Route path='/' element={ user ? <Movies /> : <Navigate to='https://reeldiary.herokuapp.com/user/login' />} />
-          <Route path='/movies' element={ user ? <Movies /> : <Navigate to='https://reeldiary.herokuapp.com/user/login' />} />
-          <Route path='/movies/create' element={user ? <MovieForm /> : <Navigate to='https://reeldiary.herokuapp.com/user/login' />} />
-          <Route path='/categories' element={user ? <Categories /> : <Navigate to='https://reeldiary.herokuapp.com/user/login' />} />
-          <Route path='/movies/:id' element={user ? <MovieDetails /> : <Navigate to='https://reeldiary.herokuapp.com/user/login' />} />
-          <Route path='/categories/:genre' element={user ? <MoviesInCategory /> : <Navigate to='https://reeldiary.herokuapp.com/user/login' />} />
-          <Route path='/user/login' element={!user ? <Login /> : <Navigate to='https://reeldiary.herokuapp.com/movies' />} />
-          <Route path='/user/signup' element={!user ? <Signup /> : <Navigate to='https://reeldiary.herokuapp.com/movies' />} />
+          <Route path='/' element={ user ? <Movies /> : <Navigate to='/user/login' />} />
+          <Route path='/movies' element={ user ? <Movies /> : <Navigate to='/user/login' />} />
+          <Route path='/movies/create' element={user ? <MovieForm /> : <Navigate to='/user/login' />} />
+          <Route path='/categories' element={user ? <Categories /> : <Navigate to='/user/login' />} />
+          <Route path='/movies/:id' element={user ? <MovieDetails /> : <Navigate to='/user/login' />} />
+          <Route path='/categories/:genre' element={user ? <MoviesInCategory /> : <Navigate to='/user/login' />} />
+          <Route path='/user/login' element={!user ? <Login /> : <Navigate to='/movies' />} />
+          <Route path='/user/signup' element={!user ? <Signup /> : <Navigate to='/movies' />} />
         </Routes>
       </div>
      </BrowserRouter>

@@ -49,7 +49,7 @@ function MovieDetails() {
         if(response.ok){
             dispatch({type:'DELETE_MOVIE', payload: json})
             setMovie(null)
-            window.location = 'https://reeldiary.herokuapp.com/movies'
+            window.location = '/movies'
         }
     }
 
@@ -90,7 +90,7 @@ function MovieDetails() {
             })}
           </div>}
             {movie && <div className='genre-button'>
-                <Link to={`https://reeldiary.herokuapp.com/categories/${movie.genre}`}><button>{movie.genre}</button></Link>
+                <Link to={`/categories/${movie.genre}`}><button>{movie.genre}</button></Link>
             </div>}
             <div className='genre-button'>
                 <button onClick={handleDelete}>Delete</button>
