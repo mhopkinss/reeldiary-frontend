@@ -17,15 +17,15 @@ function Navbar() {
             <div className='app-title'><h1>ReelDiary</h1></div>
             <div className='container'>
                 {user &&
-                <Link to='/movies/create'>
+                <Link to='https://reeldiary.herokuapp.com/movies/create'>
                     <h1>Add Movie</h1>
                 </Link>}
                 {user &&
-                <Link to='/movies'>
+                <Link to='https://reeldiary.herokuapp.com/movies'>
                     <h1>Movies</h1>
                 </Link>}
                 {user &&
-                <Link to='/categories'>
+                <Link to='https://reeldiary.herokuapp.com/categories'>
                     <h1>Categories</h1>
                 </Link>}
                 {user && (<div className='user-buttons'>
@@ -34,10 +34,10 @@ function Navbar() {
                 </div>)}
                 {!user && (
                 <div className='conditional'>
-                <Link to='/user/login'>
+                <Link to='https://reeldiary.herokuapp.com/user/login'>
                     <h1>Login</h1>
                 </Link>
-                <Link to='/user/signup'>
+                <Link to='https://reeldiary.herokuapp.com/user/signup'>
                     <h1>Sign up</h1>
                 </Link>
             </div>

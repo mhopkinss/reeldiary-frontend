@@ -11,7 +11,7 @@ function Categories() {
     const {user} = useAuthContext()
     useEffect(() => {
         const fetchCategories = async () => {
-            const response = await fetch('/categories', {
+            const response = await fetch('https://reeldiary.herokuapp.com/categories', {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }
@@ -32,7 +32,7 @@ function Categories() {
         <div className='cat-home'>
             <div className='categories'>
                 {categories && categories.map(category => {
-                   return <Link to={`/categories/${category.genre}`}><h1 className='cat'>{category.genre}</h1></Link>
+                   return <Link to={`https://reeldiary.herokuapp.com/categories/${category.genre}`}><h1 className='cat'>{category.genre}</h1></Link>
                 })}
             </div>
         </div>

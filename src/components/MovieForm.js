@@ -37,7 +37,7 @@ function MovieForm() {
             return
         }
         const replaceSpaces = movieTitle.replaceAll(' ', '+')
-        const response = await fetch(`/movies/getMovie/${replaceSpaces}`, {
+        const response = await fetch(`https://reeldiary.herokuapp.com/movies/getMovie/${replaceSpaces}`, {
             headers: {
                 'Authorization': `Bearer ${user.token}`
             }
@@ -77,7 +77,7 @@ function MovieForm() {
             setError('You must be logged in')
             return
         }
-        const response = await fetch('/movies/create', {
+        const response = await fetch('https://reeldiary.herokuapp.com/movies/create', {
         method: 'POST', 
         body: JSON.stringify(movie),
         headers: {

@@ -12,7 +12,7 @@ function MovieDetails() {
 
     useEffect(() => {
         function getStuff(){
-            fetch(`/movies/${id}`, {
+            fetch(`https://reeldiary.herokuapp.com/movies/${id}`, {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }
@@ -39,7 +39,7 @@ function MovieDetails() {
             return
         }
 
-        const response = await fetch(`/movies/${id}`, {
+        const response = await fetch(`https://reeldiary.herokuapp.com/movies/${id}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${user.token}`
@@ -49,7 +49,7 @@ function MovieDetails() {
         if(response.ok){
             dispatch({type:'DELETE_MOVIE', payload: json})
             setMovie(null)
-            window.location = '/movies'
+            window.location = 'https://reeldiary.herokuapp.com/movies'
         }
     }
 
@@ -90,7 +90,7 @@ function MovieDetails() {
             })}
           </div>}
             {movie && <div className='genre-button'>
-                <Link to={`/categories/${movie.genre}`}><button>{movie.genre}</button></Link>
+                <Link to={`https://reeldiary.herokuapp.com/categories/${movie.genre}`}><button>{movie.genre}</button></Link>
             </div>}
             <div className='genre-button'>
                 <button onClick={handleDelete}>Delete</button>
