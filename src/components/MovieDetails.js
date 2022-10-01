@@ -1,5 +1,5 @@
 import React, { useEffect, useState} from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, redirect } from 'react-router-dom';
 import {useMoviesContext} from '../hooks/useMoviesContext';
 import {useAuthContext} from '../hooks/useAuthContext'
 
@@ -49,6 +49,7 @@ function MovieDetails() {
         if(response.ok){
             dispatch({type:'DELETE_MOVIE', payload: json})
             setMovie(null)
+            return redirect('/movies')
         }
     }
 
@@ -92,7 +93,7 @@ function MovieDetails() {
                 <Link to={`/categories/${movie.genre}`}><button>{movie.genre}</button></Link>
             </div>}
             <div className='genre-button'>
-                <Link to='/movies'><button onClick={handleDelete}>Delete</button></Link>
+                <button onClick={handleDelete}>Delete</button>
             </div>
         </div>
     </div>
