@@ -9,6 +9,7 @@ function MovieDetails() {
     const [movie, setMovie] = useState(null)
     const {id} = useParams();
     const [rating, setRating] = useState(0)
+    const navigate = useNavigate()
 
     useEffect(() => {
         function getStuff(){
@@ -33,8 +34,7 @@ function MovieDetails() {
         }
     }, [id, dispatch])
 
-    async function HandleDelete(){
-        const navigate = useNavigate()
+    async function handleDelete(){
         if(!user){
             return
         }
@@ -93,7 +93,7 @@ function MovieDetails() {
                 <Link to={`/categories/${movie.genre}`}><button>{movie.genre}</button></Link>
             </div>}
             <div className='genre-button'>
-                <button onClick={HandleDelete}>Delete</button>
+                <button onClick={handleDelete}>Delete</button>
             </div>
         </div>
     </div>
