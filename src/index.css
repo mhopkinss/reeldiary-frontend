@@ -379,6 +379,8 @@ padding: 0px;
   height: 35px;
   width: 100px;
   font-size: 20px;
+  background-color: white;
+  color: black;
 }
 .user-buttons{
   display: flex;
