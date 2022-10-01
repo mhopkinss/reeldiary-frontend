@@ -33,7 +33,7 @@ function MovieDetails() {
         }
     }, [id, dispatch])
 
-    async function handleDelete(){
+    async function HandleDelete(){
         const navigate = useNavigate()
         if(!user){
             return
@@ -93,7 +93,7 @@ function MovieDetails() {
                 <Link to={`/categories/${movie.genre}`}><button>{movie.genre}</button></Link>
             </div>}
             <div className='genre-button'>
-                <button onClick={handleDelete}>Delete</button>
+                <button onClick={HandleDelete}>Delete</button>
             </div>
         </div>
     </div>
