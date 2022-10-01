@@ -21,7 +21,7 @@ body {
   background-color: #18191A;
 }
 body, html{
-  height: 100vh;
+  min-height: 100vh;
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
 }
