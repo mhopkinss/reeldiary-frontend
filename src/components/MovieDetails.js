@@ -49,7 +49,6 @@ function MovieDetails() {
         if(response.ok){
             dispatch({type:'DELETE_MOVIE', payload: json})
             setMovie(null)
-            window.location = '/movies'
         }
     }
 
@@ -93,7 +92,7 @@ function MovieDetails() {
                 <Link to={`/categories/${movie.genre}`}><button>{movie.genre}</button></Link>
             </div>}
             <div className='genre-button'>
-                <button onClick={handleDelete}>Delete</button>
+                <Link to='/movies'><button onClick={handleDelete}>Delete</button></Link>
             </div>
         </div>
     </div>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {useMoviesContext} from '../hooks/useMoviesContext';
 import {useAuthContext} from '../hooks/useAuthContext'
 import StarRating from './StarRating';
+import {Link} from 'react-router-dom';
 
 
 function MovieForm() {
@@ -95,7 +96,6 @@ function MovieForm() {
             handleCancel()
             setError(null)
             dispatch({type: 'CREATE_MOVIE', payload: json})
-            window.location.assign('https://velvety-sherbet-91b905.netlify.app/movies')
         }
     }
 
@@ -149,7 +149,7 @@ function MovieForm() {
                     <StarRating setRate={setRating} setHove={setHover} rate={rating}/>
                     </div>
                     <div className='buttons-two'>
-                    <button onClick={createNewMovie}>Add Movie</button>
+                    <Link to='/movies'><button onClick={createNewMovie}>Add Movie</button></Link>
                     <button onClick={handleCancel}>Cancel</button>
                     </div>
                 </div>
