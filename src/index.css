@@ -392,6 +392,8 @@ border: none;
 padding: 5px;
 width: 100px;
 font-size: 15px;
+background-color: white;
+color: black;
 }
 .user-buttons h4{
   font-size: 15px;
