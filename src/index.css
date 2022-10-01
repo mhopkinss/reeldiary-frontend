@@ -465,12 +465,18 @@ display: none;
 }
 @media (max-width: 795px){
   .login input{
-    width: 60%;
+    height: 40px;
   }
 }
 @media (max-width: 550px){
+  .login-container{
+    width: 100%;
+  }
   .login input{
     width: 80%;
+  }
+  .login{
+    width: 60%;
   }
   .home h1{
     font-size: 20px;
