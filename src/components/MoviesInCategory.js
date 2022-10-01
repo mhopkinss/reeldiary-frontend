@@ -33,7 +33,7 @@ function MoviesInCategory() {
 
     if(done){
         if(movies.length == 0){
-            window.location.assign('/movies')
+            window.location.assign('https://velvety-sherbet-91b905.netlify.app/movies')
         }
     }
 

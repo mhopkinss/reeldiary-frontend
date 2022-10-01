@@ -95,6 +95,7 @@ function MovieForm() {
             handleCancel()
             setError(null)
             dispatch({type: 'CREATE_MOVIE', payload: json})
+            window.location.assign('https://velvety-sherbet-91b905.netlify.app/movies')
         }
     }
 
