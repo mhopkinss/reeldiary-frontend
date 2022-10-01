@@ -92,7 +92,7 @@ function MovieDetails() {
                 <Link to={`/categories/${movie.genre}`}><button>{movie.genre}</button></Link>
             </div>}
             <div className='genre-button'>
-                <Link><button onClick={handleDelete}>Delete</button></Link>
+                <Link to='/movies'><button onClick={handleDelete}>Delete</button></Link>
             </div>
         </div>
     </div>
