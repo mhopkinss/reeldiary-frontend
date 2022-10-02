@@ -35,7 +35,7 @@ function Navbar() {
                 {!user && (
                 <div className='conditional'>
                 <Link to='/user/login'>
-                    <h1>Login</h1>
+                    <h1>Sign In</h1>
                 </Link>
                 <Link to='/user/signup'>
                     <h1>Sign up</h1>

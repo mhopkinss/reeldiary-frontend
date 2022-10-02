@@ -18,7 +18,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #18191A;
+  background-color: #212121;
 }
 body, html{
   min-height: 100vh;
@@ -346,11 +346,10 @@ border-radius: 20px;
   height: 90vh;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
 }
 .login{
-  height: 30%;
-  width: 40%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -368,19 +367,28 @@ padding: 0px;
   font-size: 20px;
 }
 .login input{
-  height: 30px;
-  border-radius: 10px;
+  height: 40px;
+  border-radius: 18px;
   border: none;
-  width: 40%;
+  width: 80%;
+  border: none;
+  background-color:#3d3d3d;
+  padding: 3px;
+  font-size: 15px;
+  color: white;
+  outline: none;
+}
+.login input::placeholder{
+  color: lightgray
 }
 .login button{
   border: none;
-  border-radius: 10px;
-  height: 35px;
-  width: 100px;
+  border-radius: 18px;
+  height: 40px;
+  width: 80%;
   font-size: 20px;
-  background-color: white;
-  color: black;
+  background-color: #EC6A37;
+  color: white;
 }
 .user-buttons{
   display: flex;
@@ -472,12 +480,6 @@ display: none;
   .login-container{
     width: 100%;
   }
-  .login input{
-    width: 80%;
-  }
-  .login{
-    width: 60%;
-  }
   .home h1{
     font-size: 20px;
     margin-top: 10px;
@@ -489,5 +491,40 @@ display: none;
 @media (max-width: 400px){
   .login input{
     width: 90%;
+  }
+}
+.login-modal{
+  display: flex;
+  height: 50%;
+  width: 60%;
+  max-width: 570px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background-color: #18191A;
+  outline: none;
+  box-shadow: 0 0 30px #3d3d3d;
+  padding: 10px;
+}
+.form-header{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+.form-header h1{
+  font-size: 50px;
+  color: lightgray;
+}
+.form-header span{
+  color: lightgray;
+}
+@media (max-width: 450px){
+  .form-header h1{
+    font-size: 30px;
+  }
+  .svg-book{
+    display: none;
   }
 }
