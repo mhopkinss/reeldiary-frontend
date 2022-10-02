@@ -373,13 +373,13 @@ padding: 0px;
   width: 80%;
   border: none;
   background-color:#3d3d3d;
-  padding: 3px;
+  padding: 0px 10px;
   font-size: 15px;
   color: white;
   outline: none;
 }
 .login input::placeholder{
-  color: lightgray
+  color: lightgray;
 }
 .login button{
   border: none;
