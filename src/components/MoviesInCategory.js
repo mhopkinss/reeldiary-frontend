@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {useParams, Link} from 'react-router-dom';
+import {useParams, Link, useNavigate} from 'react-router-dom';
 import {useAuthContext} from '../hooks/useAuthContext'
 
 function MoviesInCategory() {
@@ -8,6 +8,7 @@ function MoviesInCategory() {
     const [error, setError] = useState(null)
     const [done, setDone] = useState('')
     const {user} = useAuthContext()
+    const navigate = useNavigate()
 
     useEffect(() => {
         async function getMovies(){
@@ -33,7 +34,7 @@ function MoviesInCategory() {
 
     if(done){
         if(movies.length == 0){
-            window.location.assign('https://velvety-sherbet-91b905.netlify.app/movies')
+            navigate('/movies')
         }
     }
 
