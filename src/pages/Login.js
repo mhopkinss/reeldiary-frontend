@@ -1,16 +1,23 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {useLogin} from '../hooks/useLogin'
+import {useLogin} from '../hooks/useLogin';
+import {useGuestLogin} from "../hooks/useGuestLogin"
 
 function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const {login, error, isLoading} = useLogin()
+    const {guestLogin, errorGuest, isLoadingGuest} = useGuestLogin()
 
     async function handleSubmit(e){
         e.preventDefault()
 
         await login(email, password)
+    }
+    async function handleGuest(e){
+        e.preventDefault()
+
+        await guestLogin('guest@guest.com','Guest123!')
     }
     return (
         <div className='login-container'>
@@ -37,6 +44,9 @@ function Login() {
                     <button disabled={isLoading}>Sign In</button>
                     {error && <div>{error}</div>}
                 </form>
+                <div className='login'>
+                    <button onClick={handleGuest}>Guest Account</button>
+                </div>
             </div>
         </div>
     );
